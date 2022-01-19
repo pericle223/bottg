@@ -9,7 +9,7 @@ bot = telebot.TeleBot(API_TOKEN)
 # ссылки
 links = {"АКС":"https://zoom.us/aks",
          "Комп.Сети":"https://zoom.us/comp_seti",
-         "Арх.Комп":"https://zoom.us/arh_comp",
+         "Арх.Комп":"https://zoom.us/arh_compx",
          "Операц.Систем":"https://zoom.us/operac_sist",
          "Филос":"https://us04web.zoom.us/filos"}
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
