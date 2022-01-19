@@ -1,7 +1,8 @@
 import telebot, datetime
 from telebot import types
+#1950614489:AAFSg92N5ADfKT7Kpt4W3m-xqBCiISFy8Rk
 
-API_TOKEN = '1950614489:AAFSg92N5ADfKT7Kpt4W3m-xqBCiISFy8Rk'  # - бот оригинальный
+API_TOKEN = '1950614489:AAF4In66YPxZz_epuqrgoXBobeTjXE6qScw'  # - бот оригинальный
 
 #API_TOKEN = '1973492515:AAGgu8xygxC0Kcyu2vejW0BbuCuZ0K3-UYA'  # - бот тестовый
 bot = telebot.TeleBot(API_TOKEN)
