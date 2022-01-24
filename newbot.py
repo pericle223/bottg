@@ -8,11 +8,11 @@ from telebot import types
 bot = telebot.TeleBot(API_TOKEN)
 
 # ссылки
-links = {"АКС":"https://zoom.us/aks",
-         "Комп.Сети":"https://zoom.us/comp_seti",
-         "Арх.Комп":"https://zoom.us/arh_compx",
-         "Операц.Систем":"https://zoom.us/operac_sist",
-         "Филос":"https://us04web.zoom.us/filos"}
+links = {"АКС":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=5352776634&pwd=111",  #need to replace 
+         "Комп.Сети":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
+         "Арх.Комп":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=5352776634&pwd=111", #need to replace 
+         "Операц.Систем":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
+         "Филос":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=4191523363&pwd=1001"} #need to replace 
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
                            "Вторник":{"1":"1️⃣ Архитектура компьютерных систем-лекц. 13:00-13:50 | Zoom",
                                       "2":"2️⃣ Архитектура компьютерных систем-СРОП 14:00-14:50 | Zoom",
@@ -97,7 +97,7 @@ def start_buttons(message):
     itembtn3 = types.KeyboardButton('АПО-20-2')
     markup.add(itembtn1, itembtn2, itembtn3)
 
-    bot.send_message(message.from_user.id, "*Бот для просмотра расписания, выбери группу:*\n_P.s Расписание обновляется каждый день в 6 утра._", reply_markup=markup, parse_mode="Markdown")
+    bot.send_message(message.from_user.id, "*Бот для просмотра расписания, выбери группу:*\n_P.s Расписание обновляется каждый день в 00:00._", reply_markup=markup, parse_mode="Markdown")
 
 
 
