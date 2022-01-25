@@ -8,9 +8,9 @@ from telebot import types
 bot = telebot.TeleBot(API_TOKEN)
 
 # ссылки
-links = {"АКС":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=5352776634&pwd=111",  #need to replace 
+links = {"АКС":"https://us04web.zoom.us/j/5352776634",  #need to replace 
          "Комп.Сети":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
-         "Арх.Комп":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=5352776634&pwd=111", #need to replace 
+         "Арх.Комп":"https://us04web.zoom.us/j/5352776634", #need to replace 
          "Операц.Систем":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
          "Филос":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=4191523363&pwd=1001"} #need to replace 
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
@@ -108,9 +108,9 @@ def send_welcome(message):
 @bot.message_handler(commands=['links'])
 def send_welcome(message):
     keyboard = types.InlineKeyboardMarkup(row_width=1)
-    aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+    aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
     comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
-    arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+    arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
     operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
     filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
 
@@ -175,7 +175,7 @@ def handle_text(message):
 
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Вторник")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
             comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
             keyboard.add(aks,comp_seti)
             bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -184,7 +184,7 @@ def handle_text(message):
             b = 'Среда\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Среда")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
             operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
             filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
             keyboard.add(arh_comp,operac_sistem,filos)
@@ -222,7 +222,7 @@ def handle_text(message):
             b = 'Вторник\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Вторник")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
             comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
             keyboard.add(aks,comp_seti)
             bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -230,7 +230,7 @@ def handle_text(message):
             b = 'Среда\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(б)", "Среда")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
             operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
             filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
             keyboard.add(arh_comp,operac_sistem,filos)
@@ -265,7 +265,7 @@ def handle_text(message):
             b = 'Вторник\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Вторник")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+            aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
             comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
             keyboard.add(aks,comp_seti)
             bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -274,7 +274,7 @@ def handle_text(message):
             b = 'Среда\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-2", "Среда")), parse_mode="markdown")
             keyboard = types.InlineKeyboardMarkup(row_width=1)
-            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+            arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
             operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
             filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
             keyboard.add(arh_comp,operac_sistem,filos)
@@ -307,7 +307,7 @@ def handle_text(message):
     elif message.text == "📕Вторник":
         bot.send_message(message.from_user.id, schedule_today("АПО-20-1(а)", "Вторник"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
         comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
         keyboard.add(aks,comp_seti)
         bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -315,7 +315,7 @@ def handle_text(message):
 
         bot.send_message(message.from_user.id, schedule_today("АПО-20-1(а)", "Среда"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
         operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
         filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
         keyboard.add(arh_comp,operac_sistem,filos)
@@ -341,7 +341,7 @@ def handle_text(message):
 
         bot.send_message(message.from_user.id, schedule_today("АПО-20-1(а)", "Вторник"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
         comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
         keyboard.add(aks,comp_seti)
         bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -350,7 +350,7 @@ def handle_text(message):
 
         bot.send_message(message.from_user.id, schedule_today("АПО-20-1(б)", "Среда"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
         operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
         filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
         keyboard.add(arh_comp,operac_sistem,filos)
@@ -376,7 +376,7 @@ def handle_text(message):
 
         bot.send_message(message.from_user.id, schedule_today("АПО-20-1(а)", "Вторник"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.", url=links.get("АКС"))
+        aks = types.InlineKeyboardButton(text="Zoom|АКС|Касимов И.Р.|Пароль: 111", url=links.get("АКС"))
         comp_seti = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Куликов В.П.", url=links.get("Комп.Сети"))
         keyboard.add(aks,comp_seti)
         bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
@@ -385,7 +385,7 @@ def handle_text(message):
 
         bot.send_message(message.from_user.id, schedule_today("АПО-20-2", "Среда"))
         keyboard = types.InlineKeyboardMarkup(row_width=1)
-        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.", url=links.get("Арх.Комп"))
+        arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
         operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
         filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
         keyboard.add(arh_comp,operac_sistem,filos)
