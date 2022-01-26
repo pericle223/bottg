@@ -12,7 +12,8 @@ links = {"АКС":"https://us04web.zoom.us/j/5352776634",  #need to replace
          "Комп.Сети":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
          "Арх.Комп":"https://us04web.zoom.us/j/5352776634", #need to replace 
          "Операц.Систем":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
-         "Филос":"https://zoom.us/j/4191523363?pwd=MXFVNXErR2N2eVd6NW5idlBiL04rUT09"} #need to replace 
+         "Филос":"https://zoom.us/j/4191523363?pwd=MXFVNXErR2N2eVd6NW5idlBiL04rUT09",
+        "Филос-пр":"https://us04web.zoom.us/j/66666666"} #need to replace 
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
                            "Вторник":{"1":"1️⃣ Архитектура компьютерных систем-лекц. 13:00-13:50 | Zoom",
                                       "2":"2️⃣ Архитектура компьютерных систем-СРОП 14:00-14:50 | Zoom",
@@ -113,7 +114,7 @@ def send_welcome(message):
     arh_comp = types.InlineKeyboardButton(text="Zoom|Архитект.комп|Касимов И.Р.|Пароль: 111", url=links.get("Арх.Комп"))
     operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
     filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
-
+    filos_pr = types.InlineKeyboardButton(text="Zoom|Философия-пр|Баёв А.В.", url=links.get("Филос-пр"))
     keyboard.add(aks, comp_seti,arh_comp,operac_sistem,filos)
     bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
 
@@ -193,7 +194,7 @@ def handle_text(message):
         elif current_day == 4:
             b = 'Четверг\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Четверг")), parse_mode="markdown")
-
+            
         elif current_day == 5:
             b = 'Пятница\n'
             bot.send_message(message.from_user.id, "*{0}*\n{1}".format(b,schedule_today("АПО-20-1(а)", "Пятница")), parse_mode="markdown")
