@@ -12,7 +12,7 @@ links = {"АКС":"https://us04web.zoom.us/j/5352776634",  #need to replace
          "Комп.Сети":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
          "Арх.Комп":"https://us04web.zoom.us/j/5352776634", #need to replace 
          "Операц.Систем":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
-         "Филос":"https://skyzh.github.io/zoom-url-generator/?jump=true&confno=4191523363&pwd=1001"} #need to replace 
+         "Филос":"https://zoom.us/j/4191523363?pwd=MXFVNXErR2N2eVd6NW5idlBiL04rUT09"} #need to replace 
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
                            "Вторник":{"1":"1️⃣ Архитектура компьютерных систем-лекц. 13:00-13:50 | Zoom",
                                       "2":"2️⃣ Архитектура компьютерных систем-СРОП 14:00-14:50 | Zoom",
