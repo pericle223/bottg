@@ -13,7 +13,10 @@ links = {"АКС":"https://us04web.zoom.us/j/5352776634",  #need to replace
          "Арх.Комп":"https://us04web.zoom.us/j/5352776634", #need to replace 
          "Операц.Систем":"https://us04web.zoom.us/j/7141089072?pwd=ak1XbmprdFBUQnRZOWszWU91VHdyUT09",
          "Филос":"https://zoom.us/j/4191523363?pwd=MXFVNXErR2N2eVd6NW5idlBiL04rUT09",
-        "Филос-пр":"https://us04web.zoom.us/j/7713437043?pwd=QS9saUNveWZRa2lVclhxY3ArRi92dz09"} #need to replace 
+         "Филос-пр":"https://us04web.zoom.us/j/7713437043?pwd=QS9saUNveWZRa2lVclhxY3ArRi92dz09",
+         "Операц.Систем.курм":"https://zoom.us/j/4984727207?pwd=U1haVFNrVnVWTC9ZRHNGSS9uQ0hUdz09",
+         "Комп.Сети.леон":"https://us04web.zoom.us/j/5882022882?pwd=TXhIRTlSSFZ0M0NrRmZnU3FRY0s3Zz09",
+         "АКС.дейм":"https://us04web.zoom.us/j/2138466536?pwd=bzdRUWhoU1hTbk9lbWwwT3RiQ01oQT09"} #need to replace 
 schedule = {"АПО-20-1(а)":{"Понедельник": {"1":"1️⃣ Занятия на военной кафедре"},
                            "Вторник":{"1":"1️⃣ Архитектура компьютерных систем-лекц. 13:00-13:50 | Zoom",
                                       "2":"2️⃣ Архитектура компьютерных систем-СРОП 14:00-14:50 | Zoom",
@@ -115,7 +118,10 @@ def send_welcome(message):
     operac_sistem = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Куликов В.П.", url=links.get("Операц.Систем"))
     filos = types.InlineKeyboardButton(text="Zoom|Философия|Баёв А.В.", url=links.get("Филос"))
     filos_pr = types.InlineKeyboardButton(text="Zoom|Философия-пр|Баёв А.В.", url=links.get("Филос-пр"))
-    keyboard.add(aks, comp_seti,arh_comp,operac_sistem,filos)
+    operac_sistem2 = types.InlineKeyboardButton(text="Zoom|Операц.сист.|Курмашева Л.", url=links.get("Операц.Систем.курм"))
+    comp_seti2 = types.InlineKeyboardButton(text="Zoom|Комп.Сети|Леонов Н.Н.", url=links.get("Комп.Сети.леон"))    
+    aks2 = types.InlineKeyboardButton(text="Zoom|АКС|Деймундт А.С.", url=links.get("АКС.дейм"))
+    keyboard.add(aks, comp_seti,arh_comp,operac_sistem,filos, filos_pr, operac_sistem2, comp_seti2, aks2)
     bot.send_message(message.chat.id, "*Ссылки на конференции:*", reply_markup=keyboard, parse_mode="Markdown")
 
 @bot.message_handler(commands=['day_1']) # группа а
